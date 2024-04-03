@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt0be2a0gl3yv"]
+
+[ext_resource type="PackedScene" uid="uid://dafurvvsgg7a3" path="res://scenes/collectible.tscn" id="1_4nypn"]
+[ext_resource type="Texture2D" uid="uid://ckblnasemrqtc" path="res://sprites/objects/pngtree-energy-bar-icon-logo-flat-png-image_5256154.png" id="2_fcj02"]
+[ext_resource type="Resource" uid="uid://cr3h6tv5s57jf" path="res://inventory/items/energyBar.tres" id="2_qv1oe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xd0e2"]
+resource_local_to_scene = true
+size = Vector2(126, 107)
+
+[node name="Collectible" instance=ExtResource("1_4nypn")]
+itemRes = ExtResource("2_qv1oe")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(53, 43.5)
+shape = SubResource("RectangleShape2D_xd0e2")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(46, 45)
+scale = Vector2(0.169444, 0.168056)
+texture = ExtResource("2_fcj02")

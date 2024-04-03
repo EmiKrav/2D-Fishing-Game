@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dekhuhg74p5fp"]
+
+[ext_resource type="Script" path="res://inventory/item.gd" id="1_enhlh"]
+[ext_resource type="Texture2D" uid="uid://hiumeb3p5oqm" path="res://sprites/objects/fishing-rod-7846835_960_720.png" id="2_y54qq"]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "meskere"
+script = ExtResource("1_enhlh")
+name = "meskere"
+texture = ExtResource("2_y54qq")

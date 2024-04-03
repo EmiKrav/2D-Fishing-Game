@@ -1,0 +1,276 @@
+[gd_scene load_steps=20 format=3 uid="uid://xyqanrq1bt3a"]
+
+[ext_resource type="Script" path="res://scripts/world2.gd" id="1_syqa8"]
+[ext_resource type="Texture2D" uid="uid://cqxn7cg7ncium" path="res://sprites/objects/objects.png" id="1_x3gnx"]
+[ext_resource type="Texture2D" uid="uid://bx7m80v68snbu" path="res://sprites/tilesets/atlas_16x.png" id="2_4g8e0"]
+[ext_resource type="Script" path="res://scripts/CanvasLayer.gd" id="3_60ppi"]
+[ext_resource type="PackedScene" uid="uid://clohurgunfmeu" path="res://scenes/inventory_gui.tscn" id="5_b5wko"]
+[ext_resource type="Script" path="res://scripts/player2.gd" id="5_xr0f0"]
+[ext_resource type="Script" path="res://scripts/bed.cs" id="6_j6qu6"]
+[ext_resource type="PackedScene" uid="uid://dt6g2a2tc70df" path="res://scenes/player.tscn" id="7_0h2h4"]
+[ext_resource type="PackedScene" uid="uid://ctdcmblichnrj" path="res://scenes/bed.tscn" id="10_mvotw"]
+[ext_resource type="Script" path="res://scripts/Shop.gd" id="11_0pose"]
+[ext_resource type="Script" path="res://scripts/Labelo.cs" id="11_1cd5w"]
+[ext_resource type="Script" path="res://scripts/inventory_gui.gd" id="11_bq8pi"]
+[ext_resource type="Script" path="res://scripts/Svoris.gd" id="11_ch44q"]
+[ext_resource type="Script" path="res://scripts/Ezeras.gd" id="12_quxyt"]
+[ext_resource type="Script" path="res://scripts/Money.gd" id="13_nca8r"]
+[ext_resource type="Script" path="res://scripts/Exp.gd" id="14_boj06"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmwmp"]
+texture = ExtResource("1_x3gnx")
+11:2/size_in_atlas = Vector2i(1, 2)
+11:2/0 = 0
+11:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:2/0/physics_layer_0/angular_velocity = 0.0
+11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:0/size_in_atlas = Vector2i(2, 1)
+10:0/0 = 0
+10:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:0/0/physics_layer_0/angular_velocity = 0.0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -7.75, 16, -7.5, 16.25, 7.75, -15, 7.5)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2many"]
+texture = ExtResource("2_4g8e0")
+1:6/0 = 0
+1:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:6/0/physics_layer_0/angular_velocity = 0.0
+3:6/0 = 0
+3:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:6/0 = 0
+2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/0/physics_layer_0/angular_velocity = 0.0
+0:6/0 = 0
+0:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:6/0/physics_layer_0/angular_velocity = 0.0
+6:9/0 = 0
+6:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:9/0/physics_layer_0/angular_velocity = 0.0
+5:9/0 = 0
+5:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:9/0/physics_layer_0/angular_velocity = 0.0
+4:9/0 = 0
+4:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:9/0/physics_layer_0/angular_velocity = 0.0
+3:9/0 = 0
+3:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:9/0/physics_layer_0/angular_velocity = 0.0
+0:9/0 = 0
+0:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:9/0/physics_layer_0/angular_velocity = 0.0
+0:10/0 = 0
+0:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:10/0/physics_layer_0/angular_velocity = 0.0
+3:7/0 = 0
+3:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:7/0/physics_layer_0/angular_velocity = 0.0
+3:8/0 = 0
+3:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:8/0/physics_layer_0/angular_velocity = 0.0
+2:8/0 = 0
+2:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:8/0/physics_layer_0/angular_velocity = 0.0
+1:8/0 = 0
+1:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:8/0/physics_layer_0/angular_velocity = 0.0
+0:8/0 = 0
+0:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:8/0/physics_layer_0/angular_velocity = 0.0
+0:7/0 = 0
+0:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:7/0/physics_layer_0/angular_velocity = 0.0
+1:7/0 = 0
+1:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/0/physics_layer_0/angular_velocity = 0.0
+2:7/0 = 0
+2:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:7/0/physics_layer_0/angular_velocity = 0.0
+15:0/0 = 0
+15:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:0/0/physics_layer_0/angular_velocity = 0.0
+15:1/0 = 0
+15:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+15:1/0/physics_layer_0/angular_velocity = 0.0
+14:1/0 = 0
+14:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:1/0/physics_layer_0/angular_velocity = 0.0
+14:0/0 = 0
+14:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:0/0/physics_layer_0/angular_velocity = 0.0
+13:0/0 = 0
+13:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:0/0/physics_layer_0/angular_velocity = 0.0
+13:1/0 = 0
+13:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:1/0/physics_layer_0/angular_velocity = 0.0
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -5, -3, -4.75, -3, 8, -8, 8)
+1:5/0 = 0
+1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_0/angular_velocity = 0.0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -3.5, -8, -3.5, 2.25, 8, 1.75, 8, 8, -8, 8)
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 3.25, -8, 8, -8, 8, 8, 3.5, 8, 3.5, -5.25, -8, -5.25)
+3:5/0 = 0
+3:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:5/0/physics_layer_0/angular_velocity = 0.0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.75, 3.25, 2.25, 3.25, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+8:10/0 = 0
+8:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:10/0/physics_layer_0/angular_velocity = 0.0
+8:11/0 = 0
+8:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:11/0/physics_layer_0/angular_velocity = 0.0
+8:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:11/0 = 0
+9:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:11/0/physics_layer_0/angular_velocity = 0.0
+9:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:10/0 = 0
+9:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:10/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_mj3ww"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_hmwmp")
+sources/2 = SubResource("TileSetAtlasSource_2many")
+
+[node name="world2" type="Node2D"]
+script = ExtResource("1_syqa8")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-77, 30)
+tile_set = SubResource("TileSet_mj3ww")
+format = 2
+layer_0/name = "floor"
+layer_0/tile_data = PackedInt32Array(8, 393218, 9, 131081, 393218, 9, 7, 393218, 9, 9, 393218, 9, 10, 393218, 9, 11, 393218, 9, 131085, 393218, 9, 196621, 393218, 9, 262157, 393218, 9, 327693, 393218, 9, 393229, 393218, 9, 458765, 196610, 2, 524301, 196610, 3, 524300, 196610, 3, 524299, 196610, 3, 524298, 196610, 3, 524297, 196610, 3, 524296, 196610, 3, 524295, 196610, 3, 458758, 196610, 2, 458757, 196610, 2, 524293, 196610, 3, 524294, 196610, 3, 393221, 393218, 9, 327685, 393218, 9, 262149, 393218, 9, 196613, 393218, 9, 131077, 393218, 9, 65541, 393218, 9, 5, 393218, 9, 6, 393218, 9, 65542, 393218, 9, 131078, 393218, 9, 196614, 393218, 9, 262150, 393218, 9, 327686, 393218, 9, 393222, 393218, 9, 458759, 196610, 2, 65545, 393218, 9, 65546, 393218, 9, 65547, 393218, 9, 65548, 393218, 9, 65543, 393218, 9, 131079, 393218, 9, 196615, 393218, 9, 262151, 393218, 9, 327687, 393218, 9, 393223, 393218, 9, 458763, 196610, 2, 458764, 196610, 2, 393228, 393218, 9, 327692, 393218, 9, 262156, 393218, 9, 196620, 393218, 9, 131084, 393218, 9, 65544, 393218, 9, 131080, 393218, 9, 131083, 393218, 9, 196619, 393218, 9, 196618, 393218, 9, 196617, 393218, 9, 196616, 393218, 9, 131082, 393218, 9, 262152, 393218, 9, 327688, 393218, 9, 393224, 393218, 9, 458760, 196610, 2, 458762, 196610, 2, 393226, 393218, 9, 327690, 393218, 9, 262154, 393218, 9, 393225, 393218, 9, 327689, 393218, 9, 262153, 393218, 9, 458761, 196610, 2, 393227, 393218, 9, 327691, 393218, 9, 262155, 393218, 9, 65549, 393218, 9, -131059, 196610, 2, -131060, 196610, 2, -131061, 196610, 2, -65525, 196610, 3, -131062, 196610, 2, -65526, 196610, 3, -131063, 196610, 2, -65527, 196610, 3, -131064, 196610, 2, -65528, 196610, 3, -131065, 196610, 2, -65529, 196610, 3, -131066, 196610, 2, -65530, 196610, 3, -131067, 196610, 2, -65531, 196610, 3, -65522, 65538, 5, 14, 65538, 4, 65550, 65538, 4, 131086, 65538, 5, 196622, 65538, 4, 262158, 65538, 5, 327694, 65538, 4, 393230, 65538, 5, 458766, 65538, 4, 524302, 65538, 5, -131058, 65538, 4, -131068, 196610, 4, -65532, 196610, 5, 4, 196610, 4, 65540, 196610, 5, 131076, 196610, 4, 196612, 196610, 5, 262148, 196610, 4, 327684, 196610, 5, 393220, 196610, 4, 458756, 196610, 4, 524292, 196610, 5, 13, 393218, 9, 12, 393218, 9, -65524, 196610, 3, -65523, 196610, 3)
+layer_1/name = "walls"
+layer_1/tile_data = PackedInt32Array(-131066, 917506, 0, -131065, 983042, 0, -65529, 983042, 1, -65525, 524290, 10, 11, 524290, 11, -65524, 589826, 10, 12, 589826, 11, -65530, 917506, 1, 6, 655360, 0)
+
+[node name="player" parent="." instance=ExtResource("7_0h2h4")]
+position = Vector2(76, 75)
+script = ExtResource("5_xr0f0")
+inventory = null
+
+[node name="Bed" parent="." instance=ExtResource("10_mvotw")]
+position = Vector2(76, 43)
+script = ExtResource("6_j6qu6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("3_60ppi")
+
+[node name="Parduotuve" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.912
+anchor_top = 0.062
+anchor_right = 1.001
+anchor_bottom = 0.11
+offset_left = 0.375977
+offset_top = -0.176003
+offset_right = -2.1521
+offset_bottom = -0.280006
+grow_horizontal = 0
+text = "Parduotuve"
+script = ExtResource("11_0pose")
+
+[node name="Ezeras" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.912
+anchor_right = 0.999
+anchor_bottom = 0.048
+offset_left = 0.375977
+offset_right = 0.151855
+offset_bottom = -0.104
+grow_horizontal = 0
+text = "Prie ežero"
+script = ExtResource("12_quxyt")
+
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("5_b5wko")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -567.0
+offset_top = -221.0
+offset_right = -195.0
+offset_bottom = 5.0
+script = ExtResource("11_bq8pi")
+metadata/_edit_use_anchors_ = true
+
+[node name="Svoris" type="Label" parent="CanvasLayer/InventoryGui"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = -32.0
+offset_right = 62.0
+offset_bottom = -9.0
+grow_horizontal = 2
+text = "Bendras svoris: "
+script = ExtResource("11_ch44q")
+
+[node name="Levelis" type="Label" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 10.0
+grow_vertical = 0
+text = "a"
+script = ExtResource("11_1cd5w")
+metadata/_edit_use_anchors_ = true
+
+[node name="Money" type="Label" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Pinigai: "
+script = ExtResource("13_nca8r")
+metadata/_edit_use_anchors_ = true
+
+[node name="Exp" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -23.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Pinigai: "
+script = ExtResource("14_boj06")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="Bed" to="Bed" method="_on_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/Parduotuve" to="CanvasLayer/Parduotuve" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ezeras" to="CanvasLayer/Ezeras" method="_on_pressed"]
+[connection signal="ready" from="CanvasLayer/Levelis" to="CanvasLayer/Levelis" method="_on_ready"]

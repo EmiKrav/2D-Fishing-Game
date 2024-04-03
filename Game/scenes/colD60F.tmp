@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://xc6b68hhbehu"]
+
+[ext_resource type="PackedScene" uid="uid://dafurvvsgg7a3" path="res://scenes/collectible.tscn" id="1_e54qy"]
+[ext_resource type="Texture2D" uid="uid://dyp8scfi7jmd2" path="res://sprites/characters/fish.png" id="2_7i6wy"]
+[ext_resource type="Resource" uid="uid://c00vy5vk1j1u0" path="res://inventory/items/fish.tres" id="2_p51oo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4loh"]
+resource_local_to_scene = true
+size = Vector2(9, 16)
+
+[node name="CollectibleFish" instance=ExtResource("1_e54qy")]
+itemRes = ExtResource("2_p51oo")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(4.5, 8)
+shape = SubResource("RectangleShape2D_h4loh")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(4.5, 8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7i6wy")

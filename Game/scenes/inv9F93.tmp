@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://gp2uav54f8of"]
+
+[ext_resource type="Script" path="res://scripts/slot_gui.gd" id="1_amal2"]
+[ext_resource type="Texture2D" uid="uid://bl7kip0o47hrf" path="res://sprites/objects/inventorySlot.png" id="1_tsk4s"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7a61n"]
+
+[node name="Panel" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(69, 69)
+anchors_preset = -1
+anchor_left = 0.47
+anchor_top = 0.447
+anchor_right = 0.53
+anchor_bottom = 0.553
+offset_left = 0.0599365
+offset_top = -0.156006
+offset_right = -0.0600586
+offset_bottom = 0.155975
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_amal2")
+
+[node name="backround" type="Sprite2D" parent="."]
+scale = Vector2(3.45, 3.45)
+texture = ExtResource("1_tsk4s")
+centered = false
+vframes = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(29, 20)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -40.0
+offset_bottom = -43.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(69, 69)
+layout_mode = 2
+
+[node name="item" type="Sprite2D" parent="CenterContainer/Panel"]
+texture = SubResource("CanvasTexture_7a61n")
+centered = false
+region_rect = Rect2(100, 100, 0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/Panel/item"]
+anchors_preset = -1
+anchor_left = 7.0
+anchor_top = 7.0
+anchor_right = 63.0
+anchor_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 4

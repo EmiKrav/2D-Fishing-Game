@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://x8bwcwn7t20p"]
+
+[ext_resource type="Script" path="res://scripts/panel.gd" id="1_k3tvb"]
+[ext_resource type="Texture2D" uid="uid://ckblnasemrqtc" path="res://sprites/objects/pngtree-energy-bar-icon-logo-flat-png-image_5256154.png" id="1_r7pvt"]
+
+[node name="Panel" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(22, 21)
+offset_right = 22.0
+offset_bottom = 21.0
+script = ExtResource("1_k3tvb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(57, 54)
+scale = Vector2(0.295, 0.295)
+texture = ExtResource("1_r7pvt")

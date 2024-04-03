@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://cr3h6tv5s57jf"]
+
+[ext_resource type="Script" path="res://inventory/item.gd" id="1_2ewmb"]
+[ext_resource type="Texture2D" uid="uid://ckblnasemrqtc" path="res://sprites/objects/pngtree-energy-bar-icon-logo-flat-png-image_5256154.png" id="2_rw216"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_2ewmb")
+name = "Energybar"
+texture = ExtResource("2_rw216")

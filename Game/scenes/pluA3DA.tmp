@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://rdypny5cdpbq"]
+
+[ext_resource type="Texture2D" uid="uid://ccvblgspbuewo" path="res://sprites/characters/stock-vector-fishing-floats-bit-pixel-art-icon-set-element-design-for-mobile-app-web-sticker-logo-game-1479101774.jpg" id="1_25t72"]
+[ext_resource type="Script" path="res://scripts/plude.gd" id="1_n04ge"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsgs0"]
+atlas = ExtResource("1_25t72")
+region = Rect2(578, 469, 289, 469)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5u60c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsgs0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0fc7i"]
+radius = 145.813
+
+[node name="plude" type="CharacterBody2D"]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_n04ge")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(6.01801, 5.35008)
+scale = Vector2(0.0137162, 0.0113003)
+sprite_frames = SubResource("SpriteFrames_5u60c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(6, 6)
+scale = Vector2(0.0137162, 0.0113003)
+shape = SubResource("CircleShape2D_0fc7i")

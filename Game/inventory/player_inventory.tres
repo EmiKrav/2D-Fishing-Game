@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=20 format=3 uid="uid://c57ect2n8nud3"]
+
+[ext_resource type="Resource" uid="uid://cr3h6tv5s57jf" path="res://inventory/items/energyBar.tres" id="1_h2c3e"]
+[ext_resource type="Resource" uid="uid://dekhuhg74p5fp" path="res://inventory/items/meskere.tres" id="2_fa0ol"]
+[ext_resource type="Script" path="res://inventory/inventoryslot.gd" id="2_xoll8"]
+[ext_resource type="Script" path="res://inventory/inventory.gd" id="3_e27ov"]
+
+[sub_resource type="Resource" id="Resource_vcpp1"]
+script = ExtResource("2_xoll8")
+item = ExtResource("1_h2c3e")
+amount = 1
+
+[sub_resource type="Resource" id="Resource_uxyey"]
+script = ExtResource("2_xoll8")
+item = ExtResource("2_fa0ol")
+amount = 1
+
+[sub_resource type="Resource" id="Resource_q28ps"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_q5x86"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_xtcjo"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_i282k"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_myi62"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_dtbw1"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_645gl"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_v6m6k"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_4geqg"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_xyogj"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_mcen7"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_k0g57"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_ieg5v"]
+script = ExtResource("2_xoll8")
+amount = 0
+
+[resource]
+script = ExtResource("3_e27ov")
+maxenergy = 10
+currentEnergy = null
+slots = Array[ExtResource("2_xoll8")]([SubResource("Resource_vcpp1"), SubResource("Resource_uxyey"), SubResource("Resource_q28ps"), SubResource("Resource_q5x86"), SubResource("Resource_xtcjo"), SubResource("Resource_i282k"), SubResource("Resource_myi62"), SubResource("Resource_dtbw1"), SubResource("Resource_645gl"), SubResource("Resource_v6m6k"), SubResource("Resource_4geqg"), SubResource("Resource_xyogj"), SubResource("Resource_mcen7"), SubResource("Resource_k0g57"), SubResource("Resource_ieg5v")])

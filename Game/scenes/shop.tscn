@@ -1,0 +1,352 @@
+[gd_scene load_steps=20 format=3 uid="uid://cvpeluyfswwka"]
+
+[ext_resource type="Texture2D" uid="uid://hiumeb3p5oqm" path="res://sprites/objects/fishing-rod-7846835_960_720.png" id="1_j1xsm"]
+[ext_resource type="Script" path="res://scripts/Prekės.gd" id="1_ot5kh"]
+[ext_resource type="Script" path="res://scripts/CanvasLayer.gd" id="1_sxcpj"]
+[ext_resource type="Texture2D" uid="uid://ckblnasemrqtc" path="res://sprites/objects/pngtree-energy-bar-icon-logo-flat-png-image_5256154.png" id="2_1l0sl"]
+[ext_resource type="Script" path="res://scripts/Ezeras.gd" id="2_78axs"]
+[ext_resource type="Script" path="res://scripts/Namo.gd" id="2_757ne"]
+[ext_resource type="PackedScene" uid="uid://clohurgunfmeu" path="res://scenes/inventory_gui.tscn" id="3_8l23m"]
+[ext_resource type="Script" path="res://scripts/pirktimeskere.gd" id="3_baecn"]
+[ext_resource type="Script" path="res://scripts/pirktienergetini.gd" id="4_2evfg"]
+[ext_resource type="Script" path="res://scripts/Labelo.cs" id="4_l1kwa"]
+[ext_resource type="Resource" uid="uid://dekhuhg74p5fp" path="res://inventory/items/meskere.tres" id="4_m4gk2"]
+[ext_resource type="Script" path="res://scripts/inventory_gui.gd" id="4_y0y87"]
+[ext_resource type="Resource" uid="uid://cr3h6tv5s57jf" path="res://inventory/items/energyBar.tres" id="5_l5gl5"]
+[ext_resource type="Script" path="res://scripts/Money.gd" id="7_3iefc"]
+[ext_resource type="Script" path="res://scripts/Svoris.gd" id="7_qpqrq"]
+[ext_resource type="Script" path="res://scripts/Exp.gd" id="8_bta5f"]
+[ext_resource type="Script" path="res://scripts/Parduoti.gd" id="12_tms8i"]
+[ext_resource type="Resource" uid="uid://c00vy5vk1j1u0" path="res://inventory/items/fish.tres" id="13_5p4lo"]
+[ext_resource type="Resource" uid="uid://c57ect2n8nud3" path="res://inventory/player_inventory.tres" id="14_lsge7"]
+
+[node name="Shop" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 654.0
+color = Color(0.364706, 0.364706, 0.364706, 1)
+
+[node name="TabContainer" type="TabContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.144
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.176003
+offset_right = 1.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Prekės" type="TabBar" parent="ColorRect/TabContainer"]
+layout_direction = 2
+layout_mode = 2
+tab_alignment = 1
+script = ExtResource("1_ot5kh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/TabContainer/Prekės"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.999
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 0.153931
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="control" type="Node2D" parent="ColorRect/TabContainer/Prekės/RichTextLabel"]
+position = Vector2(276.05, 231)
+
+[node name="Panel" type="Panel" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -210.0
+offset_right = 189.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel"]
+position = Vector2(175, 200)
+scale = Vector2(0.341671, 0.316973)
+texture = ExtResource("1_j1xsm")
+
+[node name="Button" type="Button" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -31.0
+offset_right = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Pirkti"
+script = ExtResource("3_baecn")
+itemRes = ExtResource("4_m4gk2")
+inventory = ExtResource("14_lsge7")
+
+[node name="Label" type="Label" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 26
+text = "10 €"
+
+[node name="Panel2" type="Panel" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 190.0
+offset_top = -210.0
+offset_right = 569.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel2"]
+position = Vector2(170, 206)
+scale = Vector2(0.512507, 0.427224)
+texture = ExtResource("2_1l0sl")
+
+[node name="Button" type="Button" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -31.0
+offset_right = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Pirkti"
+script = ExtResource("4_2evfg")
+itemRes = ExtResource("5_l5gl5")
+inventory = ExtResource("14_lsge7")
+
+[node name="Label" type="Label" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 26
+text = "1 €"
+
+[node name="Panel3" type="Panel" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 568.345
+offset_top = -210.0
+offset_right = 947.345
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel3"]
+position = Vector2(175, 200)
+scale = Vector2(0.341671, 0.316973)
+texture = ExtResource("1_j1xsm")
+
+[node name="Button" type="Button" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -31.0
+offset_right = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Pirkti"
+script = ExtResource("3_baecn")
+itemRes = ExtResource("4_m4gk2")
+inventory = ExtResource("14_lsge7")
+
+[node name="Label" type="Label" parent="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 26
+text = "30 €"
+
+[node name="HScrollBar" type="HScrollBar" parent="ColorRect/TabContainer/Prekės"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.944
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.22403
+offset_right = -13.795
+grow_horizontal = 2
+grow_vertical = 0
+min_value = -190.0
+max_value = 1000.0
+step = 100.0
+page = 100.0
+value = -190.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("1_sxcpj")
+
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("3_8l23m")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -113.0
+offset_right = 186.0
+offset_bottom = 113.0
+script = ExtResource("4_y0y87")
+metadata/_edit_use_anchors_ = true
+
+[node name="Svoris" type="Label" parent="CanvasLayer/InventoryGui"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = -32.0
+offset_right = 62.0
+offset_bottom = -9.0
+grow_horizontal = 2
+text = "Bendras svoris: "
+script = ExtResource("7_qpqrq")
+
+[node name="Namo" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.913
+anchor_right = 1.0
+anchor_bottom = 0.046
+offset_left = 0.223999
+offset_top = -1.0
+offset_bottom = 0.191998
+grow_horizontal = 0
+text = "Namo"
+script = ExtResource("2_757ne")
+metadata/_edit_use_anchors_ = true
+
+[node name="Prie ezero" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.913
+anchor_top = 0.065
+anchor_right = 0.999
+anchor_bottom = 0.113
+offset_left = 0.223999
+offset_top = -0.120003
+offset_right = 1.15186
+offset_bottom = -0.224007
+grow_horizontal = 0
+text = "Prie ezero
+"
+script = ExtResource("2_78axs")
+metadata/_edit_use_anchors_ = true
+
+[node name="Money" type="Label" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Pinigai: "
+script = ExtResource("7_3iefc")
+metadata/_edit_use_anchors_ = true
+
+[node name="Levelis" type="Label" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 10.0
+grow_vertical = 0
+text = "a"
+script = ExtResource("4_l1kwa")
+metadata/_edit_use_anchors_ = true
+
+[node name="Exp" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -23.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Patirtis: "
+script = ExtResource("8_bta5f")
+metadata/_edit_use_anchors_ = true
+
+[node name="parduotuve" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.509
+anchor_top = 0.087
+anchor_right = 0.509
+anchor_bottom = 0.087
+offset_left = -127.368
+offset_top = -31.376
+offset_right = 126.632
+offset_bottom = 31.624
+grow_horizontal = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 45
+text = "Parduotuvė"
+
+[node name="Parduoti" type="Button" parent="."]
+offset_right = 161.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 26
+text = "Parduoti žuvis"
+script = ExtResource("12_tms8i")
+itemRes = ExtResource("13_5p4lo")
+inventory = ExtResource("14_lsge7")
+
+[connection signal="pressed" from="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel/Button" to="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel/Button" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel2/Button" to="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel2/Button" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel3/Button" to="ColorRect/TabContainer/Prekės/RichTextLabel/control/Panel3/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Namo" to="CanvasLayer/Namo" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Prie ezero" to="CanvasLayer/Prie ezero" method="_on_pressed"]
+[connection signal="ready" from="CanvasLayer/Levelis" to="CanvasLayer/Levelis" method="_on_ready"]
+[connection signal="pressed" from="Parduoti" to="Parduoti" method="_on_pressed"]

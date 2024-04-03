@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctdcmblichnrj"]
+
+[ext_resource type="Texture2D" uid="uid://dogyrmn1og8cc" path="res://sprites/characters/objects.png" id="1_teac8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0jst"]
+size = Vector2(20, 31.5)
+
+[node name="Bed" type="StaticBody2D"]
+input_pickable = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_teac8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g0jst")

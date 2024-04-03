@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://c00vy5vk1j1u0"]
+
+[ext_resource type="Script" path="res://inventory/item.gd" id="1_wp5fe"]
+[ext_resource type="Texture2D" uid="uid://dyp8scfi7jmd2" path="res://sprites/characters/fish.png" id="2_7g4uf"]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "fish"
+script = ExtResource("1_wp5fe")
+name = "fish"
+texture = ExtResource("2_7g4uf")
